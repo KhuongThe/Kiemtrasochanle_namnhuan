@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <p>Mời bạn nhập số:</p>
+        <input type="text" id="number">
+        <button type="button" onclick="Kiemtraso()">Kiểm tra</button>
+
+    </form>
+</body>
+<script>
+    function Kiemtraso() {
+        let x = document.getElementById("number").value;
+        let y = x % 2;
+        if (y == 0) {
+            alert("Số bạn nhập là số chẵn");
+        }
+        else {
+            alert("Số bạn nhập là số lẻ");
+        }
+    }
+</script>
+
+</html>

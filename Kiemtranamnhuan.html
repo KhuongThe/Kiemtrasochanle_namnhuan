@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <p>Nhập vào năm cần kiểm tra:</p>
+        <input type="number" id="number">
+        <button type="button" onclick="kiemtranamnhuan()">Kiêm tra năm</button>
+        <br>
+        <p id="kq">Trả kết quả:</p>
+    </form>
+</body>
+<script>
+    function kiemtranamnhuan() {
+
+
+        let input_x = document.getElementById("number").value;
+        let x = parseInt(input_x);
+        if (x % 4 == 0) {
+            if (x % 100 == 0) {
+                if (x % 400 == 0) {
+                    document.getElementById("kq").innerText = ("Trả kết quả: " + x + " Là năm nhuận");
+                }
+                else {
+                    document.getElementById("kq").innerText = ("Trả kết quả: " + x + " Không phải là năm nhuận");
+                }
+            }
+            else {
+                document.getElementById("kq").innerText = ("Trả kết quả: " + x + " Là năm nhuận");
+            }
+        }
+        else {
+            document.getElementById("kq").innerText = ("Trả kết quả: " + x + " Không phải là năm nhuận");
+        }
+
+
+    }
+</script>
+
+</html>
